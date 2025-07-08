@@ -1,7 +1,7 @@
 // shows the shortest possible way to get from one square to another
 // by outputting all squares the knight will stop on along the way.
 
-function knightValidMoves(pos) {
+function knightValidMoves() {
   return [
     [1, 2],
     [1, -2],
@@ -32,7 +32,7 @@ function BFS(start, end) {
       return path;
     }
 
-    let moves = knightValidMoves(currPos);
+    let moves = knightValidMoves();
 
     for (let move of moves) {
       let nextPos = [currPos[0] + move[0], currPos[1] + move[1]];
